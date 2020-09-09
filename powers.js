@@ -84,19 +84,33 @@ function resultado(digitList) {
   //aqui se obtiene la longitud del string que contiene los digitos
   let strlength = digitList.length;
   /*Convertimos la cadena string en un arreglo con la propiedad "Array.from()"*/
-  let arreglo = Array.from(digitList);
+  let arreglo = [];
+  arreglo = Array.from(digitList);
   //Se invierte el orden del arreglo
   arreglo.reverse();
   //se eliminan los espacios vacios del arreglo
-  arreglo.flat();
-  
+  /*Para eso se divide el arreglo en cuatro grupos sin tomar en cuenta los
+  espacios para luego unir los cuatro grupos y formar un solo arreglo*/
+  let groupArray1 = arreglo.slice(0, 4);
+  let groupArray2 = arreglo.slice(5, 9);
+  let groupArray3 = arreglo.slice(10, 14);
+  let groupArray4 = arreglo.slice(15, 19);
+
+  /*
+  console.log(groupArray1);
+  console.log(groupArray2);
+  console.log(groupArray3);
+  console.log(groupArray4);
+  */
+  /*Union de grupo de arreglos en uno solo */
+  let LuhnArray = []
+  LuhnArray = groupArray1.concat(groupArray2, groupArray3, groupArray4);
+  console.log(LuhnArray);
+
   //console.log(arreglo);
-  for (let i = 0; i < strlength; i++) {
+
+  /*for (let i = 0; i < strlength; i++) {
     console.log(arreglo[i]);
-  }
-
-  //Eliminar los espacios vacios del arreglo.
-
-  //Invertir posiciones de los digitos del arreglo.
+  }*/
 
 }

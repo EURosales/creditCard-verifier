@@ -89,6 +89,7 @@ function resultado(digitList) {
   arreglo.reverse();
   //se eliminan los espacios vacios del arreglo
   arreglo.flat();
+  
   //console.log(arreglo);
   for (let i = 0; i < strlength; i++) {
     console.log(arreglo[i]);

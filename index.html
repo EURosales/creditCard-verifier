@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>credit.ou</title>
+</head>
+
+<body>
+
+    <!--Contenedor general de componentes-->
+    <main class="container">
+
+        <!--Primera mitad - izquierda-->
+        <section>
+            <!--Logo de empresa-->
+            <img class="logo" src="multimedia/logo.jpg" alt="credit.uo logo">
+            <!--Texto informativo e introductorio-->
+            <div class="info-text">
+                <!--Titulo-->
+                <h3 class="titulo">¿Tienes dudas sobre la veracidad de tu tarjeta?</h3>
+                <!--parrafo-->
+                <p class="parrafo">Credit.ou es una plataforma que te ayuda a verificar la veracidad de tu tarjeta de
+                    crédito de manera fácil, rapida y confiable.</p>
+            </div>
+        </section>
+
+        <!--Segunda mitad - derecha-->
+        <aside>
+            <!--Título introductorio-->
+            <h4 class="titulo-aside">Ingresa los 16 dígitos de tu tarjeta de credito:</h4>
+            <form id="myForm">
+                <div class="input-field-container">
+                    <label for="numTarjeta">Numero:</label>
+                    <!--Input de ingreso para digitos de tarjeta-->
+                    <input type="tel" id="numTarjeta" class="input-field" minlength="19" maxlength="19"
+                        placeholder="Ej. 5549 4200 0014 0000"
+                        title="Agrega un espacio cada 4 dígitos, facilita la revisión de tu parte." required />
+                    <small id="smE" class="hide sm-empty">No has ingresado nada, por favor revisa.</small>
+                    <small id="smN" class="hide sm-noMatch">No has ingresado todos los dígitos o NO has dejando espacios
+                        en
+                        blanco
+                        cada 4 dígitos.</small>
+                </div>
+                <!--Boton de verificación-->
+                <button id="btnVerificar" type="submit" class="btn btn-verificar">Verificar</button>
+            </form>
+            <!--Contenedor de label e input-->
+        </aside>
+    </main>
+
+</body>
+<script src="powers.js"></script>
+
+</html>

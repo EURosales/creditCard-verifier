@@ -107,10 +107,7 @@ label {
   text-align: center;
   border: none;
   cursor: pointer;
-}
-
-.input-field:valid {
-  border: 2px solid green;
+  transition: 0.8s;
 }
 
 input:focus {
@@ -118,7 +115,13 @@ input:focus {
 }
 
 .input-error {
-  border-bottom: 2px solid red;
+  border: 2px solid red;
+  transition: 0.8s;
+}
+
+.input-success {
+  border: 2px solid green;
+  transition: 0.8s;
 }
 
 .sm-empty {

@@ -29,24 +29,28 @@
             </section>
 
             <!--Segunda mitad - derecha-->
-            <aside>
+            <aside class="">
                 <!--Título introductorio-->
-                <h4 class="titulo-aside">Ingresa los 16 dígitos de tu tarjeta de credito:</h4>
-                <form id="myForm" autocomplete="off" <div class="input-field-container">
-                    <label for="numTarjeta">Numero:</label>
-                    <!--Input de ingreso para digitos de tarjeta-->
-                    <input type="tel" id="numTarjeta" class="input-field" minlength="19" maxlength="19"
-                        placeholder="Ej. 5549 4200 0014 0000"
-                        title="Agrega un espacio cada 4 dígitos, facilita la revisión de tu parte." required />
-                    <small id="smE" class="hide sm-empty">No has ingresado nada, por favor revisa.</small>
-                    <small id="smN" class="hide sm-noMatch">No has ingresado todos los dígitos o NO has dejando espacios
-                        en
-                        blanco
-                        cada 4 dígitos.</small>
+                <h4 id="titulo_informativo" class="titulo-aside">Ingresa los 16 dígitos de tu tarjeta de credito:</h4>
+                <form id="myForm" autocomplete="on" class="">
+                    <div class="input-field-container">
+                        <label for="numTarjeta">Numero:</label>
+                        <!--Input de ingreso para digitos de tarjeta-->
+                        <input type="tel" id="numTarjeta" class="input-field" minlength="19" maxlength="19"
+                            placeholder="Ej. 5549 4200 0014 0000"
+                            title="Agrega un espacio cada 4 dígitos, facilita la revisión de tu parte." required />
+                        <small id="smE" class="hide sm-empty">No has ingresado nada, por favor revisa.</small>
+                        <small id="smN" class="hide sm-noMatch">No has ingresado todos los dígitos o NO has dejando
+                            espacios
+                            en
+                            blanco
+                            cada 4 dígitos.</small>
                     </div>
                     <!--Boton de verificación-->
                     <button id="btnVerificar" type="submit" class="btn btn-verificar">Verificar</button>
                 </form>
+                <!--Boton para reintentar-->
+                <button id="btnRetry" class="btn btn-verificar hide">Verificar otra tarjeta</button>
                 <!--Contenedor de label e input-->
             </aside>
         </main>

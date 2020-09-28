@@ -1,13 +1,18 @@
 //Declaración de variables
 //Variable para botón de verificación
-const btnVerificar = document.getElementById("btnVerificar");
+const btnVerificar = document.getElementById('btnVerificar');
+const btnReload = document.getElementById('btnRetry');
 //Variable para input que contiene el numero
-const numero = document.querySelector("#numTarjeta");
-const form = document.getElementById("myForm");
+const numero = document.querySelector('#numTarjeta');
+const form = document.getElementById('myForm');
+const titulo = document.getElementById('titulo_informativo')
 //avisos sobre problemas de validaciones
 const sm_empty = document.getElementById('smE');
 const sm_noMatch = document.getElementById('smN');
 
+btnReload.addEventListener("click", function (e) {
+    location.reload();
+});
 
 btnVerificar.addEventListener("click", function (e) {
     //evita que entre el valor vacio por defecto a la primera función.
@@ -103,7 +108,7 @@ function resultado(digitList) {
     let luhnArray = []
     //se concatenan los grupos de arreglos en uno solo
     luhnArray = groupArray1.concat(groupArray2, groupArray3, groupArray4);
-
+    testArray = groupArray1.concat(groupArray2, groupArray3, groupArray4);
     //Se invierte el orden del arreglo
     luhnArray.reverse();
     
@@ -135,10 +140,24 @@ function resultado(digitList) {
     let nFinal = sum(totalArray);
 
     //console.log(nFinal);
+    //console.log((nFinal % 10) == 0);
+
+/*Pista visual que indica si el numero es real o no*/
+    
     /*se verifica si el residuo de la división entre "10"
     del numero ubtenido termina en "0"; si es asi, es un numero de tarjeta de credito valido (output:"true"),
     de lo contrario es invalido(output:"false")*/
-    console.log((nFinal % 10) == 0);
+    if ((nFinal % 10) == 0) {
+        form.classList.add('hide');
+        titulo.innerText = "La tarjeta que termina en: "+ groupArray4 +" es válida.";
+        titulo.classList.add('input-success');
+        btnReload.classList.toggle('hide');
+    } else {
+        form.classList.add('hide');
+        titulo.innerText = "El numero de tarjeta ingresado "+ testArray +" es inválido, Por favor revise.";
+        titulo.classList.add('input-error');
+        btnReload.classList.toggle('hide');
+    }
     
 }
 

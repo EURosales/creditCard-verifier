@@ -115,13 +115,13 @@ input:focus {
 }
 
 .input-error {
-  border: 2px solid red;
-  transition: 0.8s;
+  color: rgb(233, 43, 43);
+  /*transition: 0.8s;*/
 }
 
 .input-success {
-  border: 2px solid green;
-  transition: 0.8s;
+  color: rgb(23, 112, 23);
+  /*transition: 0.8s;*/
 }
 
 .sm-empty {

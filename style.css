@@ -134,6 +134,7 @@ input:focus {
 
 /*Diseño de botones*/
 .btn {
+  margin-top: 15px;
   padding: 10px 50px;
   border-radius: 5px;
   font-size: 15px;

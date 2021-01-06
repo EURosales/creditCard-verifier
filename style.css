@@ -161,12 +161,16 @@ input:focus {
   display: none;
 }
 
-/*First point break - 1000px and under*/
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+  section {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  aside {
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+  }
   .container {
-  flex-direction: column;
+    flex-direction: column;
+  }
 }
-}
-
-/*Second point break - aprox 400px*/

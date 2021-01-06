@@ -163,7 +163,12 @@ input:focus {
 
 /*First point break - 1000px and under*/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
+  .container {
+  /*border: 2px solid black;*/
+  
+  flex-direction: column;
+}
 }
 
 /*Second point break - aprox 400px*/

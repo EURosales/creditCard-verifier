@@ -99,7 +99,7 @@ function resultado(digitList) {
         btnReload.classList.toggle('hide');
     } else {
         form.classList.add('hide');
-        titulo.innerText = "El numero de tarjeta ingresado "+ testArray +" es inválido, Por favor revise.";
+        titulo.innerText = "El numero de tarjeta ingresado "+ testArray +" es inválido, debido a que no cumple con los requisitos.";
         titulo.classList.add('input-error');
         btnReload.classList.toggle('hide');
     }

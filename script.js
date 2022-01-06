@@ -69,7 +69,10 @@ function resultado(digitList) {
 
   let totalArray = [];
   totalArray = Array.from(sumaPares);
-  let nFinal = sum(totalArray);
+  //suma de arreglo
+  let nFinal = totalArray.reduce((total, digito) => {
+    return Number(total) + Number(digito);
+  }, 0);
 
   if (nFinal % 10 == 0) {
     form.classList.add("hide");
@@ -85,18 +88,4 @@ function resultado(digitList) {
     titulo.classList.add("input-error");
     btnReload.classList.toggle("hide");
   }
-}
-
-//suma de elementos del array
-function sum(input) {
-  if (toString.call(input) !== "[object Array]") return false;
-
-  let total = 0;
-  for (let i = 0; i < input.length; i++) {
-    if (isNaN(input[i])) {
-      continue;
-    }
-    total += Number(input[i]);
-  }
-  return total;
 }
